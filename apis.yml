@@ -1,23 +1,68 @@
 aid: beast-games
+
 name: Beast Games
-description: 'Beast Games is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Beast Games is a reality‑competition entertainment brand created by MrBeast, featuring large‑scale physical and mental challenges with a $5 million grand prize. The platform showcases elite strength, intelligence and strategy contests, partnering with major brands and streaming on Amazon Prime Video.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beast-games/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Entertainment
+- Competition
+- Gaming
+- Streaming
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/beast-games-clarity-security.txt
+- type: WellKnown
+  url: well-known/beast-games-well-known.yml
+- type: Security
+  url: https://clarity.com/vdp
+- type: Hosts
+  url: hosts/beast-games-hosts.yml
+- type: Vendors
+  url: vendors/beast-games-vendors.yml
+- type: VulnerabilityDisclosure
+  url: security/beast-games-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/beast-games-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/beast-games-stock
+  url: https://www.beastgames.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found at api.beastgames.com or any discovered host.
+  evidence:
+    - url: https://api.beastgames.com/openapi.json
+      status: 0
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,47 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - security
+  - website
+hosts:
+- host: api.beastgames.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: beastgames.com
+  role: api
+  relation: own
+- host: clarity.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: clarity.com
+  role: security
+  relation: other-domain
+- host: www.beastgames.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: beastgames.com
+  role: website
+  relation: own
